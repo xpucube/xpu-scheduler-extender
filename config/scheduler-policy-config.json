@@ -1,0 +1,21 @@
+{
+  "kind": "Policy",
+  "apiVersion": "v1",
+  "extenders": [
+    {
+      "apiVersion": "v1beta1",
+      "urlPrefix": "http://[hostname]:32766/xpu-schd-ext",
+      "filterVerb": "filter",
+      "bindVerb":   "bind",
+      "enableHttps": false,
+      "nodeCacheCapable": true,
+      "managedResources": [
+        {
+          "name": "openxpu.com/xpu-shares",
+          "ignoredByScheduler": false
+        }
+      ],
+      "ignorable": false
+    }
+  ]
+}
